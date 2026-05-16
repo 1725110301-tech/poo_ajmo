@@ -12,7 +12,7 @@ class Silla:
         self.peso=peso
         self.diseno=diseno
         
-        print(f"Marca: {self.material}")
+        print(f"Material: {self.material}")
         print(f"Ergonomia: {self.ergonomia}")
         print(f"Portabilidad: {self.portabilidad}")
         print(f"No de patas: {self.no_patas}")
