@@ -1,0 +1,40 @@
+class Transporte: 
+    def __init__(self, marca, modelo, anio, color, capacidad_de_pasajeros, peso, pais_de_origen, kilometraje, 
+                 en_movimiento, velocidad_maxima):
+        self.marca = marca
+        self.modelo = modelo
+        self.anio = anio
+        self.color = color
+        self.capacidad_de_pasajeros = capacidad_de_pasajeros
+        self.velocidad_maxima = velocidad_maxima
+        self.peso = peso
+        self.pais_de_origen = pais_de_origen
+        self.kilometraje = kilometraje
+        self.en_movimiento = en_movimiento
+    def arrancar(self):
+        self.en_movimiento = True
+        print(f"{self.marca} {self.modelo} ha arrancado.")
+    def detener(self):
+        self.en_movimiento = False
+        print(f"{self.marca} {self.modelo} se ha detenido.")
+    def acelerar(self, velocidad):
+        print(f"{self.marca} {self.modelo} está acelerando a {velocidad} km/h.")
+    def frenar(self):
+        print(f"{self.marca} {self.modelo} está frenando.")
+    def mostrar_info(self):
+        print(f"Marca: {self.marca}")
+        print(f"Modelo: {self.modelo}")
+        print(f"Año: {self.anio}")
+        print(f"Color: {self.color}")
+        print(f"Capacidad de pasajeros: {self.capacidad_de_pasajeros}")
+        print(f"Peso: {self.peso} kg")
+        print(f"País de origen: {self.pais_de_origen}")
+        print(f"Kilometraje: {self.kilometraje} km")
+        print(f"En movimiento: {'Sí' if self.en_movimiento else 'No'}")
+        print(f"Velocidad máxima: {self.velocidad_maxima} km/h")
+transporte1 = Transporte("Toyota", "Corolla", 2020, "Rojo", 5, 1300, "Japón", 15000, False, 180 )
+transporte1.mostrar_info()
+transporte1.arrancar()
+transporte1.acelerar(60)
+transporte1.frenar()
+transporte1.detener()
